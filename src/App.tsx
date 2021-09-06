@@ -1,14 +1,13 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
-
-import png from './assets/404.png';
+import {Button} from 'antd'
 
 class App extends React.Component {
   render() {
     return (
       <>
-        <img src={png} alt="" />
-        <div className="imgg"></div>
+        2333
+        <Button>2333</Button>
       </>
     );
   }
