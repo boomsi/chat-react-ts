@@ -1,13 +1,13 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
-import {Button} from 'antd'
+
+import Wrapper from '@/layout/wrapper';
 
 class App extends React.Component {
   render() {
     return (
       <>
-        2333
-        <Button>2333</Button>
+        <Wrapper />
       </>
     );
   }

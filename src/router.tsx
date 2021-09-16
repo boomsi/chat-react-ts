@@ -17,24 +17,10 @@ const routes: IRoutes[] = [
   {
     path: '/index',
     component: 'index',
-    name: '登录',
+    name: '主页',
     key: 'index',
     exact: true
   },
-  {
-    path: '/webpack',
-    component: 'webpack',
-    name: 'Webpack',
-    key: 'webpack',
-    exact: true
-  },
-  {
-    path: '/vite',
-    component: 'vite',
-    name: 'Vite',
-    key: 'vite',
-    exact: true
-  }
 ];
 
 export { routes, IRoutes };

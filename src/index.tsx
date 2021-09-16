@@ -8,9 +8,7 @@ import './global.less';
 const mountNode = document.getElementById('app');
 
 ReactDOM.render(
-  <BrowserRouter
-  // basename="/index"
-  >
+  <BrowserRouter>
     <App />
   </BrowserRouter>,
   mountNode
