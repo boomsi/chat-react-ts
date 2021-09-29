@@ -5,6 +5,7 @@ const { merge } = require('webpack-merge');
 
 const devConfig = require('./webpack.config.dev');
 const prodConfig = require('./webpack.config.prod');
+const antTheme = require('./theme.json');
 
 const commonConfig = {
   output: {
@@ -26,7 +27,19 @@ const commonConfig = {
       },
       {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                modifyVars: antTheme,
+                javascriptEnabled: true
+              },
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -64,7 +77,7 @@ const commonConfig = {
       template: path.resolve(__dirname, '../public/template.ejs')
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
-    new webpack.ProgressPlugin()
+    new webpack.ProgressPlugin(),
   ],
   // FIXME
   optimization: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 
-import Wrapper from '@/layout/wrapper';
+import Wrapper from '@/pages/chat-index';
 
 class App extends React.Component {
   render() {

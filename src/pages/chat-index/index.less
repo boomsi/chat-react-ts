@@ -1,0 +1,104 @@
+@custom-top-header-height: 48px;
+@custom-team-header-height: 80px;
+@custom-space-aside-width: 20%;
+@custom-team-link-width: 30%;
+@custom-block-border-color: #ccc;
+@custom-black-background-color: #f5f5f5;
+
+.root-wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: @custom-space-aside-width auto @custom-team-link-width;
+  grid-template-rows: @custom-top-header-height @custom-team-header-height auto;
+  grid-auto-flow: column dense;
+
+  .top-header {
+    grid-column: 1/4;
+    background-color: @custom-primary-color;
+    display: grid;
+    grid-template-columns: 20% auto 30%;
+    place-items: center;
+    place-content: center space-between;
+    color: #fff;
+    padding: 0 24px;
+
+    & > div:first-child {
+      place-self: start;
+    }
+
+    .setting-block {
+      display: grid;
+      grid-template-columns: 200px 40px;
+      column-gap: 10px;
+      place-self: end;
+    }
+  }
+
+  .team-header {
+    grid-column: 2/4;
+    border-bottom: 1px solid @custom-block-border-color;
+    background-color: @custom-black-background-color;
+  }
+
+  .space-aside {
+    grid-row: 2/4;
+    border-right: 1px solid @custom-block-border-color;
+    background-color: @custom-black-background-color;
+  }
+
+  .talk-main {
+    border-right: 1px solid @custom-block-border-color;
+  }
+
+  .team-aside {
+    grid-row: 3/4;
+    background-color: @custom-black-background-color;
+  }
+}
+
+.space-aside {
+  padding-top: 24px;
+  .chat-list {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      display: grid;
+      grid-template-columns: 24px auto 20px;
+      align-items: center;
+      place-content: center space-between;
+      height: 40px;
+      padding: 0 16px;
+      cursor: pointer;
+      transition: all .3s;
+
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border-radius: 50%;
+        border: 1px solid @custom-primary-color;
+        flex-shrink: 0;
+      }
+      em {
+        background-color: #8E8E8E;
+        border-radius: 50%;
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+      }
+      &:hover{
+        background-color: @btn-primary-bg;
+        color: #FFF;
+      }
+      &.title {
+        background-color: inherit;
+      }
+    }
+    li.active-item {
+      background-color: @custom-primary-color;
+      color: #FFF;
+    }
+  }
+}

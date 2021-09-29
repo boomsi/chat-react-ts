@@ -1,0 +1,7 @@
+{
+  "@custom-primary-color": "#2b507d",
+  "@custom-primary-btn-bg": "#4B7EBE",
+  
+
+  "@btn-primary-bg": "@custom-primary-btn-bg"
+}

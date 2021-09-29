@@ -7,7 +7,7 @@ const config = {
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: './dist',
-    open: true,
+    open: false,
     compress: true,
     port: 8000,
     historyApiFallback: true,
