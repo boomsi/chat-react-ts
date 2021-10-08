@@ -1,6 +1,7 @@
 {
   "@custom-primary-color": "#2b507d",
   "@custom-primary-btn-bg": "#4B7EBE",
+  "custom-primary-active-bg": "#3B67A2",
   
 
   "@btn-primary-bg": "@custom-primary-btn-bg"

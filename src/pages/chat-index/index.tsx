@@ -24,9 +24,16 @@ function Wrapper() {
       </header>
       <aside className="space-aside">
         <List />
-        <List />
       </aside>
-      <header className="team-header">team-header</header>
+      <header className="team-header">
+        <img />
+        <div>
+          <p></p>
+          <p></p>
+        </div>
+        <div>
+        </div>
+      </header>
       <main className="talk-main">talk-main</main>
       <aside className="team-aside">team-aside</aside>
     </div>

@@ -1,14 +1,22 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 
-import Wrapper from '@/pages/chat-index';
+import { IRoutes, routes } from '@/router';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
-      <>
-        <Wrapper />
-      </>
+      <Switch>
+        {routes.map((item: IRoutes) => {
+          const C = React.lazy(() => import(`./pages/${item.component}`));
+          return (
+            <Route key={item.key} path={item.path}>
+              <C />
+            </Route>
+          );
+        })}
+      </Switch>
     );
   }
 }

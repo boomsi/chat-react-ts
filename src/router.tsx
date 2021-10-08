@@ -10,15 +10,15 @@ interface IRoutes {
 const routes: IRoutes[] = [
   {
     path: '/',
-    redirect: '/index',
+    redirect: '/chat-index',
     exact: true,
     key: 'redirect'
   },
   {
-    path: '/index',
-    component: 'index',
+    path: '/chat-index',
+    component: 'chat-index',
     name: '主页',
-    key: 'index',
+    key: 'chat-index',
     exact: true
   },
 ];
